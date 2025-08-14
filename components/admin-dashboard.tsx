@@ -604,10 +604,7 @@ export function AdminDashboard() {
                 <Eye className="w-4 h-4 mr-2" />
                 Tekrar Kontrol Et
               </Button>
-              <Button onClick={handleLogout} variant="outline">
-                <LogOut className="w-4 h-4 mr-2" />
-                Çıkış Yap
-              </Button>
+              
             </div>
           </div>
         </div>
@@ -616,28 +613,28 @@ export function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-red-50/20">
+    <div className="min-h-screen bg-gradient-to-b from-background to-red-50/20 ">
       <header className="bg-background/95 backdrop-blur border-b">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex-col md:flex md:justify-between md:items-center">
+          <div className="md:justify-between md:items-center">
             <div>
               <h1 className="font-serif font-black text-3xl md:text-4xl text-red-600">Yönetici Paneli</h1>
               <p className="text-muted-foreground">Steakhouse menünüzü yönetin</p>
             </div>
-            <div className="flex gap-4">
-              <Button asChild variant="outline">
+            <div className="flex flex-col md:flex-row gap-4">
+              <Button asChild variant="outline" className="w-full md:w-fit">
                 <a href="/menu">
                   <Eye className="w-4 h-4 mr-2" />
                   Menüyü Görüntüle
                 </a>
               </Button>
-              <Button variant="outline" onClick={handleLogout}>
+              <Button variant="outline" onClick={handleLogout}  className="w-full md:w-fit">
                 <LogOut className="w-4 h-4 mr-2" />
                 Çıkış Yap
               </Button>
               <Dialog open={isCategoryDialogOpen} onOpenChange={setIsCategoryDialogOpen}>
                 <DialogTrigger asChild>
-                  <Button variant="outline" onClick={openAddCategoryDialog}>
+                  <Button variant="outline" onClick={openAddCategoryDialog}  className="w-full md:w-fit">
                     <Settings className="w-4 h-4 mr-2" />
                     Kategorileri Yönet
                   </Button>
@@ -757,7 +754,7 @@ export function AdminDashboard() {
 
               <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
                 <DialogTrigger asChild>
-                  <Button onClick={openAddDialog} className="bg-red-600 hover:bg-red-700">
+                  <Button onClick={openAddDialog} className="bg-red-600 hover:bg-red-700 w-full md:w-fit">
                     <Plus className="w-4 h-4 mr-2" />
                     Öğe Ekle
                   </Button>
@@ -1068,7 +1065,7 @@ export function AdminDashboard() {
       <main className="container mx-auto px-4 py-6">
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           
-          <div className="overflow-x-auto no-scrollbar -mx-4 px-4">
+          <div className="overflow-x-auto no-scrollbar mx-4 px-4 md:w-full">
       <TabsList className="flex w-max gap-4">
         {categories.map((category) => (
           <TabsTrigger
