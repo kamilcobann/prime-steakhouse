@@ -1070,7 +1070,7 @@ if (error) {
       <main className="container mx-auto px-4 py-6">
         <Tabs value={activeTab} onValueChange={setActiveTab}>
           
-          <div className="overflow-x-auto no-scrollbar mx-4 px-4 md:w-full">
+          <div className="overflow-x-auto no-scrollbar mx-4 px-4">
       <TabsList className="flex w-max gap-4">
         {categories.map((category) => (
           <TabsTrigger
