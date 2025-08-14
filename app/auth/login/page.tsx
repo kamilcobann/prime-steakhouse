@@ -1,22 +1,29 @@
-import { createServerClient } from "@/lib/supabase/server"
-import { redirect } from "next/navigation"
-import LoginForm from "@/components/login-form"
+"use client"
+import { useEffect, useState } from "react"
+import { useRouter } from "next/navigation"
+import { supabase } from "@/lib/supabase/client"
+import { AdminDashboard } from "@/components/admin-dashboard"
 
-export default async function LoginPage() {
-  // Check if user is already logged in
-  const supabase = createServerClient()
-  const {
-    data: { session },
-  } = await supabase.auth.getSession()
+export default function AdminPage() {
+  const router = useRouter()
+  const [loading, setLoading] = useState(true)
 
-  // If user is logged in, redirect to admin page
-  if (session) {
-    redirect("/admin")
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (!user) {
+        router.replace("/auth/login")
+      }
+      setLoading(false)
+    })
+  }, [router])
+
+  if (loading) {
+    return <div>Loading...</div>
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-background to-red-50/20 px-4 py-12 sm:px-6 lg:px-8">
-      <LoginForm />
-    </div>
+    <main className="min-h-screen bg-background">
+      <AdminDashboard />
+    </main>
   )
 }
