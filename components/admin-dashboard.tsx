@@ -67,10 +67,9 @@ export function AdminDashboard() {
   const [imageFile, setImageFile] = useState<File | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
   const { toast } = useToast()
-
-  useEffect(() => {
-    loadData()
-  }, [])
+ useEffect(() => {
+   loadData()
+ }, [])
 
   const loadData = async () => {
     try {
@@ -381,15 +380,21 @@ export function AdminDashboard() {
 
   const handleLogout = async () => {
     try {
+    
       const { error } = await supabase.auth.signOut()
-      if (error) throw error
+
+if (error) {
+  console.error('Çıkış yapılamadı:', error.message)
+} else {
+  console.log('Başarıyla çıkış yapıldı')
+}
 
       toast({
         title: "Çıkış yapıldı",
         description: "Başarıyla çıkış yaptınız",
       })
 
-      window.location.href = "/auth/login"
+      window.location.href = "/menu"
     } catch (error) {
       console.error("Error logging out:", error)
       toast({
