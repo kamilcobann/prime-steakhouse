@@ -619,7 +619,7 @@ export function AdminDashboard() {
     <div className="min-h-screen bg-gradient-to-b from-background to-red-50/20">
       <header className="bg-background/95 backdrop-blur border-b">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex justify-between items-center">
+          <div className="flex-col md:flex md:justify-between md:items-center">
             <div>
               <h1 className="font-serif font-black text-3xl md:text-4xl text-red-600">Yönetici Paneli</h1>
               <p className="text-muted-foreground">Steakhouse menünüzü yönetin</p>
