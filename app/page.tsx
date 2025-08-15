@@ -223,8 +223,8 @@ Her detayın keyfiniz için tasarlandığı lüks bir ambiyansa kendinizi bırak
             <div>
               <h4 className="font-sans font-semibold text-lg mb-4">Çalışma Saatleri</h4>
               <div className="font-sans text-gray-400 space-y-1">
-                <p>Pazartesi - Kapalo</p>
-                <p>Salı - Pazar: 11.00 - 21:00 PM</p>
+                <p>Pazartesi - Kapalı</p>
+                <p>Salı - Pazar: 11.00 - 21:00</p>
               </div>
             </div>
             <div>
