@@ -26,9 +26,9 @@ export default function LandingPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
+      <nav className="fixed top-0  bg-background/95 backdrop-blur-sm border-b border-border z-50 w-full overflow-x-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="font-serif font-black text-2xl text-gray-800">Shish&Go Steakhouse</div>
