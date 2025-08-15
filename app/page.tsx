@@ -143,7 +143,13 @@ Her detayın keyfiniz için tasarlandığı lüks bir ambiyansa kendinizi bırak
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-6 h-6 text-purple-400" />
                   <span className="font-sans">
-                  <a href="https://maps.app.goo.gl/F6eZzGHe8MNaDQQS8">Yol Tarifi Alın</a>
+                    <Link
+    href="https://maps.app.goo.gl/F6eZzGHe8MNaDQQS8"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Yol Tarifi Alın
+  </Link>
                   </span>
                 </div>
               </div>
