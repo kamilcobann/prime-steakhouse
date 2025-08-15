@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable} ${openSans.variable} antialiased`}>
-      <body className="font-sans">
+      <body className="font-sans overflow-x-hidden">
         <AuthProvider>
           {children}
           <Toaster />

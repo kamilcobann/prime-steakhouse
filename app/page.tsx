@@ -53,7 +53,7 @@ export default function LandingPage() {
             backgroundImage: "url('/elegant-steakhouse.png')",
           }}
         ></div>
-        <div className="relative z-10 text-center text-white bold max-w-4xl mx-auto px-4">
+        <div className="relative z-10 text-center text-white bold w-full mx-auto px-4">
           <h1 className="font-serif font-black text-5xl md:text-7xl mb-6 leading-tight">
             Mutfakta Mükemmelliğinin Tadını Çıkarın
           </h1>
