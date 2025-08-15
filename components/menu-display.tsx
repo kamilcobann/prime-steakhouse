@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { ChefHat, AlertTriangle, Languages } from "lucide-react"
 import { supabase } from "@/lib/supabase/client"
+import GTranslate from "@/components/GTranslate"
 
 interface MenuItem {
   id: string
@@ -68,8 +69,11 @@ export function MenuDisplay() {
   }
 
   useEffect(() => {
-    loadData()
+   loadData()
   }, [])
+
+  
+
 
   const loadData = async () => {
     try {
@@ -172,7 +176,7 @@ export function MenuDisplay() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center">
-            <h1 className="font-serif font-black text-4xl md:text-5xl text-red-600 mb-2">Prime Steakhouse</h1>
+            <h1 className="font-serif font-black text-4xl md:text-5xl text-red-600 mb-2">Shish&Go Steakhouse</h1>
             <p className="text-muted-foreground text-lg">
               {language === "tr"
                 ? "Mutfak mükemmelliğinin premium kalite ile buluştuğu yer"
@@ -181,13 +185,12 @@ export function MenuDisplay() {
           </div>
 
           <div className="flex justify-center mt-4">
-            <Button variant="outline" onClick={toggleLanguage} className="flex items-center gap-2 bg-transparent">
-              <Languages className="w-4 h-4" />
-              {language === "tr" ? "English" : "Türkçe"}
-            </Button>
+            
+            <div className="gtranslate_wrapper"></div>
           </div>
+          
 
-          <nav className="flex flex-wrap justify-center gap-2 mt-6">
+          <nav className="flex gap-2 mt-6 overflow-x-auto no-scrollbar snap-x snap-mandatory">
             {categories.map((category) => (
               <Button
                 key={category.id}

@@ -13,10 +13,10 @@ export default function MenuPage() {
             <Button variant="ghost" asChild>
               <Link href="/" className="flex items-center space-x-2">
                 <ArrowLeft className="w-4 h-4" />
-                <span>Back to Home</span>
+                <span>Ana Sayfa</span>
               </Link>
             </Button>
-            <div className="font-serif font-black text-2xl text-gray-800">Prime Steakhouse Menu</div>
+            <div className="font-serif font-black text-2xl hidden text-gray-800">Prime Steakhouse Menu</div>
             <Button variant="ghost" asChild>
               <Link href="/admin">Admin</Link>
             </Button>

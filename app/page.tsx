@@ -31,7 +31,7 @@ export default function LandingPage() {
       <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-serif font-black text-2xl text-gray-800">Prime Steakhouse</div>
+            <div className="font-serif font-black text-2xl text-gray-800">Shish&Go Steakhouse</div>
             <div className="flex space-x-4">
               <Button variant="ghost" asChild>
                 <Link href="/menu">Menu</Link>
@@ -53,21 +53,21 @@ export default function LandingPage() {
             backgroundImage: "url('/elegant-steakhouse.png')",
           }}
         ></div>
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+        <div className="relative z-10 text-center text-white bold max-w-4xl mx-auto px-4">
           <h1 className="font-serif font-black text-5xl md:text-7xl mb-6 leading-tight">
-            Indulge in Culinary Excellence
+            Mutfakta Mükemmelliğinin Tadını Çıkarın
           </h1>
           <p className="font-sans text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto">
-            Experience the art of steak in a refined atmosphere where every detail is crafted for your enjoyment.
+            Her detayın sizin keyfiniz için tasarlandığı zarif bir atmosferde et sanatını deneyimleyin.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 text-lg" asChild>
-              <Link href="/menu">View Our Menu</Link>
+            <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg flex" asChild>
+              <Link href="/menu">Menü</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg bg-transparent"
+              className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg bg-transparent hidden"
             >
               Make Reservation
             </Button>
@@ -76,7 +76,7 @@ export default function LandingPage() {
       </section>
 
       {/* Featured Cuts Section */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-slate-50 hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif font-black text-4xl md:text-5xl text-gray-800 mb-4">Featured Cuts</h2>
@@ -85,7 +85,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 hidden">
             {featuredItems.map((item, index) => (
               <Card
                 key={index}
@@ -121,33 +121,35 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-serif font-black text-4xl md:text-5xl mb-6">A Dining Experience Like No Other</h2>
+              <h2 className="font-serif font-black text-4xl md:text-5xl mb-6">Eşsiz Bir Lezzet Deneyimi</h2>
               <p className="font-sans text-xl text-gray-300 mb-8 leading-relaxed">
-                Immerse yourself in an ambiance of luxury, where every detail is crafted for your enjoyment. From our
-                carefully curated wine selection to our impeccable service, we create moments that last a lifetime.
+              
+Her detayın keyfiniz için tasarlandığı lüks bir ambiyansa kendinizi bırakın.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
                 <div className="flex items-center space-x-3">
                   <ChefHat className="w-6 h-6 text-purple-400" />
-                  <span className="font-sans">Master Chefs</span>
+                  <span className="font-sans">Usta Şefler</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Clock className="w-6 h-6 text-purple-400" />
-                  <span className="font-sans">Open Daily</span>
+                  <span className="font-sans">Çalışma Saatleri (Pazartesi Kapalı): 11.00-21.00</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Star className="w-6 h-6 text-purple-400" />
-                  <span className="font-sans">5-Star Service</span>
+                  <span className="font-sans">Yüksek Kaliteli Servis</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-6 h-6 text-purple-400" />
-                  <span className="font-sans">Prime Location</span>
+                  <span className="font-sans">
+                  <a href="https://maps.app.goo.gl/F6eZzGHe8MNaDQQS8">Yol Tarifi Alın
+                  </span>
                 </div>
               </div>
 
-              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 px-8 py-4 text-lg" asChild>
-                <Link href="/menu">Explore Full Menu</Link>
+              <Button size="lg" className="bg-red-600 hover:bg-red-700 px-8 py-4 text-lg" asChild>
+                <Link href="/menu">Menü</Link>
               </Button>
             </div>
 
@@ -173,7 +175,7 @@ export default function LandingPage() {
                 <img
                   src="/placeholder-bwfaq.png"
                   alt="Table Setting"
-                  className="w-full h-48 object-cover rounded-lg shadow-lg"
+                  className="w-full h-48 object-cover rounded-lg shadow-lg hidden"
                 />
               </div>
             </div>
@@ -182,8 +184,8 @@ export default function LandingPage() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-50 hidden">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 hidden">
           <h2 className="font-serif font-black text-4xl md:text-5xl text-gray-800 mb-6">
             Ready for an Unforgettable Experience?
           </h2>
@@ -210,30 +212,26 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-serif font-black text-2xl mb-4">Prime Steakhouse</h3>
-              <p className="font-sans text-gray-400">
-                Where culinary excellence meets exceptional service in an atmosphere of refined elegance.
-              </p>
+              <h3 className="font-serif font-black text-2xl mb-4">Shish&Go Steakhouse</h3>
             </div>
             <div>
-              <h4 className="font-sans font-semibold text-lg mb-4">Hours</h4>
+              <h4 className="font-sans font-semibold text-lg mb-4">Çalışma Saatleri</h4>
               <div className="font-sans text-gray-400 space-y-1">
-                <p>Monday - Thursday: 5:00 PM - 10:00 PM</p>
-                <p>Friday - Saturday: 5:00 PM - 11:00 PM</p>
-                <p>Sunday: 4:00 PM - 9:00 PM</p>
+                <p>Pazartesi - Kapalo</p>
+                <p>Salı - Pazar: 11.00 - 21:00 PM</p>
               </div>
             </div>
             <div>
-              <h4 className="font-sans font-semibold text-lg mb-4">Contact</h4>
+              <h4 className="font-sans font-semibold text-lg mb-4">İletişim</h4>
               <div className="font-sans text-gray-400 space-y-1">
-                <p>123 Steakhouse Avenue</p>
-                <p>Downtown District</p>
-                <p>(555) 123-STEAK</p>
+                <p>Cumhuriyet Mahallesi</p>
+                <p>Mehmet Topaç Bulvarı No:180/A Uşak/MERKEZ</p>
+                <p>+905413344541</p>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="font-sans text-gray-400">© 2024 Prime Steakhouse. All rights reserved.</p>
+            <p className="font-sans text-gray-400">Shish&Go Steakhouse</p>
           </div>
         </div>
       </footer>
