@@ -50,7 +50,7 @@ export default function LandingPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/elegant-steakhouse.p')",
+            backgroundImage: "url('/portion.png')",
           }}
         ></div>
         <div className="relative z-10 text-center text-white bold w-full mx-auto px-4">
@@ -162,19 +162,19 @@ Her detayın keyfiniz için tasarlandığı lüks bir ambiyansa kendinizi bırak
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img
-                  src="/elegant-steakhouse.png"
+                  src="/portion.png"
                   alt="Dining Room"
                   className="w-full h-48 object-cover rounded-lg shadow-lg"
                 />
                 <img
-                  src="/premium-steak-grill.png"
+                  src="/sis.webp"
                   alt="Grilling"
                   className="w-full h-32 object-cover rounded-lg shadow-lg"
                 />
               </div>
               <div className="space-y-4 mt-8">
                 <img
-                  src="/premium-wine-cellar.png"
+                  src="/pirzola.webp"
                   alt="Wine Cellar"
                   className="w-full h-32 object-cover rounded-lg shadow-lg"
                 />
