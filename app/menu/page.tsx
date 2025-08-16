@@ -17,7 +17,7 @@ export default function MenuPage() {
               </Link>
             </Button>
             <div className="font-serif font-black text-2xl hidden text-gray-800">Prime Steakhouse Menu</div>
-            <Button variant="ghost" asChild>
+            <Button variant="ghost" asChild className="hidden">
               <Link href="/admin">Admin</Link>
             </Button>
           </div>

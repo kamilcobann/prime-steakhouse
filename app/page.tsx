@@ -28,15 +28,15 @@ export default function LandingPage() {
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0  bg-background/95 backdrop-blur-sm border-b border-border z-50 w-full overflow-x-hidden">
+      <nav className="fixed top-0  bg-white backdrop-blur-sm border-b border-border z-50 w-full overflow-x-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-serif font-black text-2xl text-gray-800">Shish&Go Steakhouse</div>
+            <img src="/logo.png" alt="Shish&Go Steakhouse" className="h-18 w-auto" />
             <div className="flex space-x-4">
               <Button variant="ghost" asChild>
                 <Link href="/menu">Menu</Link>
               </Button>
-              <Button variant="ghost" asChild>
+              <Button variant="ghost" asChild className="hidden">
                 <Link href="/admin">Admin</Link>
               </Button>
             </div>
@@ -123,8 +123,7 @@ export default function LandingPage() {
             <div>
               <h2 className="font-serif font-black text-4xl md:text-5xl mb-6">Eşsiz Bir Lezzet Deneyimi</h2>
               <p className="font-sans text-xl text-gray-300 mb-8 leading-relaxed">
-              
-Her detayın keyfiniz için tasarlandığı lüks bir ambiyansa kendinizi bırakın.
+                Her detayın keyfiniz için tasarlandığı lüks bir ambiyansa kendinizi bırakın.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-6 mb-8">
@@ -143,13 +142,9 @@ Her detayın keyfiniz için tasarlandığı lüks bir ambiyansa kendinizi bırak
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-6 h-6 text-purple-400" />
                   <span className="font-sans">
-                    <Link
-    href="https://maps.app.goo.gl/F6eZzGHe8MNaDQQS8"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Yol Tarifi Alın
-  </Link>
+                    <Link href="https://maps.app.goo.gl/F6eZzGHe8MNaDQQS8" target="_blank" rel="noopener noreferrer">
+                      Yol Tarifi Alın
+                    </Link>
                   </span>
                 </div>
               </div>
@@ -161,23 +156,11 @@ Her detayın keyfiniz için tasarlandığı lüks bir ambiyansa kendinizi bırak
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                <img
-                  src="/portion.png"
-                  alt="Dining Room"
-                  className="w-full h-48 object-cover rounded-lg shadow-lg"
-                />
-                <img
-                  src="/sis.webp"
-                  alt="Grilling"
-                  className="w-full h-32 object-cover rounded-lg shadow-lg"
-                />
+                <img src="/portion.png" alt="Dining Room" className="w-full h-48 object-cover rounded-lg shadow-lg" />
+                <img src="/sis.webp" alt="Grilling" className="w-full h-32 object-cover rounded-lg shadow-lg" />
               </div>
               <div className="space-y-4 mt-8">
-                <img
-                  src="/pirzola.webp"
-                  alt="Wine Cellar"
-                  className="w-full h-32 object-cover rounded-lg shadow-lg"
-                />
+                <img src="/pirzola.webp" alt="Wine Cellar" className="w-full h-32 object-cover rounded-lg shadow-lg" />
                 <img
                   src="/placeholder-bwfaq.png"
                   alt="Table Setting"

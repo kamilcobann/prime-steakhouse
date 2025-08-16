@@ -173,10 +173,14 @@ export function MenuDisplay() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-red-50/20">
-      <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+      <header className="sticky top-0 z-50 bg-white backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center">
-            <h1 className="font-serif font-black text-4xl md:text-5xl text-red-600 mb-2">Shish&Go Steakhouse</h1>
+            <div className="w-full flex flex-col md:flex-row justify-center items-center gap-2">
+            <img src="/logo.png" alt="Shish&Go Steakhouse" className="h-18 w-auto" />
+                        <h1 className="font-serif font-black text-4xl md:text-5xl text-red-600 mb-2">Shish&Go Steakhouse</h1>
+
+            </div>
             <p className="text-muted-foreground text-lg">
               {language === "tr"
                 ? "Mutfak mükemmelliğinin premium kalite ile buluştuğu yer"
@@ -190,7 +194,7 @@ export function MenuDisplay() {
           </div>
           
 
-          <nav className="flex gap-2 mt-6 overflow-x-auto no-scrollbar snap-x snap-mandatory">
+          <nav className="flex gap-2 mt-6 md:justify-center md:items-center overflow-x-auto no-scrollbar snap-x snap-mandatory">
             {categories.map((category) => (
               <Button
                 key={category.id}
