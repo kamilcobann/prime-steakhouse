@@ -419,7 +419,7 @@ export function MenuDisplay() {
 
       <footer className="bg-red-600 text-white py-8 mt-12">
         <div className="container mx-auto px-4 text-center">
-          <h3 className="font-serif font-bold text-2xl mb-2">Prime Steakhouse</h3>
+          <h3 className="font-serif font-bold text-2xl mb-2">Shish&Go Steakhouse</h3>
           <p className="text-red-100">
             {language === "tr"
               ? "En kaliteli etler ve olağanüstü hizmet deneyimi"
