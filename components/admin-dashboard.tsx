@@ -14,6 +14,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Trash2, Edit, Plus, Eye, LogOut, Upload, X, Settings } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import { supabase } from "@/lib/supabase/client"
+import { cn } from "@/lib/utils"; // cn utility varsa
 
 interface MenuItem {
   id: string
@@ -927,7 +928,12 @@ if (error) {
                           <SelectTrigger>
                             <SelectValue placeholder="Kategori seçin" />
                           </SelectTrigger>
-                          <SelectContent>
+                          <SelectContent
+        className={cn(
+          "absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md border bg-white shadow-lg",
+          "scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100"
+        )}
+      >
                             {categories.map((cat) => (
                               <SelectItem key={cat.id} value={cat.id}>
                                 {cat.name_tr}
