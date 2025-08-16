@@ -54,7 +54,7 @@ export default function LandingPage() {
           }}
         ></div>
         <div className="relative z-10 text-center text-white bold w-full mx-auto px-4">
-          <h1 className="font-serif font-black text-5xl md:text-7xl mb-6 leading-tight">
+          <h1 className="font-serif font-black mb-6 leading-tight md:text-5xl text-4xl">
             Mutfakta Mükemmelliğin Tadını Çıkarın
           </h1>
           <p className="font-sans text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto">
