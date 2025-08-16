@@ -50,7 +50,7 @@ export default function LandingPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('/elegant-steakhouse.png')",
+            backgroundImage: "url('/elegant-steakhouse.p')",
           }}
         ></div>
         <div className="relative z-10 text-center text-white bold w-full mx-auto px-4">
